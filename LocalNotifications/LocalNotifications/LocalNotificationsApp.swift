@@ -37,9 +37,7 @@ struct LocalNotificationsApp: App {
     private func requestNotificationsPermission() {
         notificationManager.requestPermission(completionHandler: { isGranted, error in
             if isGranted {
-                DispatchQueue.main.async {
-                    UIApplication.shared.registerForRemoteNotifications()
-                }
+                // handle granted success
             }
 
             if let _ = error {
